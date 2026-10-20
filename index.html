@@ -10,17 +10,15 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #111827; /* Dark charcoal */
+            background-color: #111827; 
             color: #f3f4f6;
         }
         .font-chewy {
             font-family: 'Chewy', cursive;
         }
-        /* Efek Glow Madu */
         .glow-honey {
             box-shadow: 0 0 20px rgba(251, 191, 36, 0.15);
         }
-        /* Bento Card Glassmorphism */
         .bento-card {
             background: rgba(31, 41, 55, 0.6);
             backdrop-filter: blur(16px);
@@ -32,7 +30,6 @@
             transform: translateY(-3px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(251, 191, 36, 0.1);
         }
-        /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -43,7 +40,6 @@
             background: #fbbf24;
             border-radius: 10px;
         }
-        /* Animasi Muncul Lembut */
         .fade-in-up {
             opacity: 0;
             transform: translateY(20px);
@@ -58,29 +54,30 @@
 <body class="antialiased selection:bg-yellow-400 selection:text-gray-900 pb-20">
 
     <!-- Floating Navigation Pill -->
-    <nav class="fixed top-4 left-1/2 transform -translate-x-1/2 w-[90%] max-w-xl z-50">
-        <div class="bg-gray-900/80 backdrop-blur-xl border border-white/10 rounded-full px-6 py-3 flex justify-between items-center shadow-2xl">
+    <nav class="fixed top-4 left-1/2 transform -translate-x-1/2 w-[95%] max-w-2xl z-50">
+        <div class="bg-gray-900/90 backdrop-blur-xl border border-white/10 rounded-full px-4 py-2 md:px-6 md:py-3 flex justify-between items-center shadow-2xl">
             <div class="flex items-center gap-2">
                 <span class="relative flex h-3 w-3">
                   <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                   <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
                 </span>
-                <span class="text-xs font-semibold text-gray-200 tracking-wider">BUKA (17.30 - 23.00)</span>
+                <span class="text-[10px] md:text-xs font-semibold text-gray-200 tracking-wider">BUKA (17.30 - 23.00)</span>
             </div>
-            <div class="flex gap-4">
-                <a href="https://instagram.com" target="_blank" class="text-gray-300 hover:text-yellow-400 transition">
-                    <i class="fab fa-instagram text-xl"></i>
-                </a>
-            </div>
+            
+            <!-- Tombol Instagram Terhubung -->
+            <a href="https://www.instagram.com/terangbulansarangmadu" target="_blank" class="flex items-center gap-2 bg-gray-800 hover:bg-gray-700 px-3 py-1.5 rounded-full transition border border-white/10 text-gray-200 hover:text-yellow-400 group">
+                <i class="fab fa-instagram text-lg group-hover:scale-110 transition-transform"></i>
+                <span class="text-xs font-semibold tracking-wide hidden sm:inline">@terangbulansarangmadu</span>
+                <span class="text-xs font-semibold tracking-wide sm:hidden">Instagram</span>
+            </a>
         </div>
     </nav>
 
-    <!-- Main Container (Pad UI constraint) -->
-    <main class="max-w-4xl mx-auto px-4 pt-24 pb-12">
+    <!-- Main Container -->
+    <main class="max-w-5xl mx-auto px-4 pt-24 pb-12">
         
         <!-- Header / Hero Bento -->
         <header class="bento-card rounded-[2.5rem] p-8 md:p-12 mb-6 glow-honey fade-in-up text-center relative overflow-hidden">
-            <!-- Dekorasi Lebah/Madu (Opsional) -->
             <div class="absolute -top-10 -right-10 w-40 h-40 bg-yellow-500/10 rounded-full blur-3xl"></div>
             <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-orange-500/10 rounded-full blur-3xl"></div>
             
@@ -88,58 +85,85 @@
             <h1 class="font-chewy text-5xl md:text-6xl text-white mb-4 leading-tight">
                 Terang Bulan <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-600">Sarang Madu</span>
             </h1>
-            <p class="text-xl md:text-2xl text-gray-300 mb-2">MANISNYA PAS, SARANG MADUNYA BERKELAS 👑🍯</p>
-            <p class="text-md text-yellow-400 font-semibold italic mb-6">"Lezat, Tebal & Berserat!"</p>
+            <p class="text-lg md:text-2xl text-gray-300 mb-2">MANISNYA PAS, SARANG MADUNYA BERKELAS 👑🍯</p>
+            <p class="text-md text-yellow-400 font-semibold italic mb-8">"Lezat, Tebal & Berserat!"</p>
 
-            <div class="flex flex-wrap justify-center gap-4 mt-8">
-                <a href="https://maps.app.goo.gl/search/SDN+Cangkir+Driyorejo+Gresik" target="_blank" class="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-2xl flex items-center gap-3 border border-white/10 transition-all text-sm md:text-base font-semibold">
-                    <i class="fas fa-map-marker-alt text-red-500"></i> Depan SDN Cangkir, Gresik
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4 mt-4">
+                <!-- Tombol Google Maps Terhubung -->
+                <a href="https://www.google.com/maps/search/?api=1&query=SDN+Cangkir+Driyorejo+Gresik" target="_blank" class="bg-gray-800 hover:bg-gray-700 text-white px-2 py-2 pr-6 rounded-2xl flex items-center gap-3 border border-white/10 transition-all text-sm md:text-base font-semibold group w-full md:w-auto">
+                    <div class="bg-red-500/20 p-3 rounded-xl group-hover:bg-red-500/40 transition">
+                        <i class="fas fa-map-marker-alt text-red-500 text-xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <span class="block text-[10px] text-gray-400 font-normal uppercase tracking-wider">Buka di Google Maps</span>
+                        Depan SDN Cangkir, Gresik
+                    </div>
                 </a>
-                <div class="bg-gray-800 text-white px-6 py-3 rounded-2xl flex items-center gap-3 border border-white/10 text-sm md:text-base font-semibold">
-                    <i class="far fa-clock text-yellow-400"></i> Tutup Hari Kamis
+
+                <div class="bg-gray-800 text-white px-6 py-4 rounded-2xl flex items-center gap-3 border border-white/10 text-sm md:text-base font-semibold w-full md:w-auto justify-center">
+                    <i class="far fa-clock text-yellow-400 text-xl"></i> 
+                    <div>
+                        <span class="block text-[10px] text-gray-400 font-normal uppercase tracking-wider">Jadwal Libur</span>
+                        Tutup Hari Kamis
+                    </div>
                 </div>
             </div>
         </header>
 
-        <!-- Bento Grid Info Khusus -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 fade-in-up">
+        <!-- Bento Grid Info & Rating (3 Kolom) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 fade-in-up">
+            
             <!-- Promo Card -->
-            <div class="bg-gradient-to-br from-yellow-500/20 to-orange-600/20 backdrop-blur-md rounded-[2rem] p-6 border border-yellow-500/30 flex items-center justify-center glow-honey relative overflow-hidden group">
+            <div class="bg-gradient-to-br from-yellow-500/20 to-orange-600/20 backdrop-blur-md rounded-[2rem] p-6 border border-yellow-500/30 flex items-center justify-center glow-honey relative overflow-hidden group h-full">
                 <div class="absolute inset-0 bg-yellow-400/5 group-hover:bg-yellow-400/10 transition"></div>
                 <div class="text-center relative z-10">
-                    <span class="bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3 inline-block animate-pulse">Promo Spesial</span>
+                    <span class="bg-red-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3 inline-block animate-pulse">Promo Spesial</span>
                     <h2 class="text-3xl font-chewy text-yellow-400 mb-1">BELI 10 GRATIS 1</h2>
-                    <p class="text-gray-300 text-sm">Berlaku untuk semua varian rasa!</p>
+                    <p class="text-gray-300 text-xs">Berlaku untuk semua varian rasa!</p>
                 </div>
             </div>
 
+            <!-- Rating Card Baru -->
+            <div class="bento-card rounded-[2rem] p-6 flex flex-col items-center justify-center text-center h-full">
+                <h3 class="text-4xl font-chewy text-white mb-2">4.9 <span class="text-xl text-gray-400 font-sans font-semibold">/ 5</span></h3>
+                <div class="text-yellow-400 text-lg mb-3 flex gap-1">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="text-gray-300 text-xs font-semibold">Berdasarkan Ulasan Pelanggan</p>
+                <p class="text-gray-500 text-[10px] mt-1">Terfavorit di Driyorejo!</p>
+            </div>
+
             <!-- Kontak Card -->
-            <div class="bento-card rounded-[2rem] p-6 flex flex-col items-center justify-center text-center">
+            <div class="bento-card rounded-[2rem] p-6 flex flex-col items-center justify-center text-center h-full">
                 <i class="fab fa-whatsapp text-4xl text-green-400 mb-3"></i>
-                <h3 class="text-lg font-bold text-white mb-1">Pesan via WhatsApp</h3>
-                <p class="text-gray-400 text-sm mb-4">Tanpa antre, langsung ambil!</p>
-                <a href="https://wa.me/6282142525420" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-xl transition-all shadow-lg shadow-green-500/30">
+                <h3 class="text-base font-bold text-white mb-1">Pesan via WhatsApp</h3>
+                <p class="text-gray-400 text-xs mb-4">Tanpa antre, langsung ambil!</p>
+                <a href="https://wa.me/6282142525420" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-xl transition-all shadow-lg shadow-green-500/30 text-sm">
                     0821-4252-5420
                 </a>
             </div>
         </div>
 
         <!-- Menu Section -->
-        <section class="mt-12 fade-in-up">
-            <div class="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
+        <section class="mt-8 fade-in-up">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-6 gap-4">
                 <h2 class="font-chewy text-4xl text-white">Buku Menu</h2>
                 
                 <!-- Filter Pills -->
-                <div class="flex bg-gray-800/80 p-1.5 rounded-full border border-white/5 overflow-x-auto max-w-full no-scrollbar">
-                    <button onclick="filterMenu('semua')" id="btn-semua" class="filter-btn active-filter px-5 py-2 rounded-full text-sm font-semibold transition-all whitespace-nowrap">Semua</button>
-                    <button onclick="filterMenu('biasa')" id="btn-biasa" class="filter-btn px-5 py-2 rounded-full text-sm font-semibold text-gray-400 hover:text-white transition-all whitespace-nowrap">Biasa</button>
-                    <button onclick="filterMenu('campur')" id="btn-campur" class="filter-btn px-5 py-2 rounded-full text-sm font-semibold text-gray-400 hover:text-white transition-all whitespace-nowrap">Campur</button>
-                    <button onclick="filterMenu('istimewa')" id="btn-istimewa" class="filter-btn px-5 py-2 rounded-full text-sm font-semibold text-gray-400 hover:text-white transition-all whitespace-nowrap">Istimewa</button>
+                <div class="flex bg-gray-800/80 p-1.5 rounded-full border border-white/5 overflow-x-auto w-full md:w-auto no-scrollbar">
+                    <button onclick="filterMenu('semua')" id="btn-semua" class="filter-btn active-filter flex-1 md:flex-none px-5 py-2 rounded-full text-xs md:text-sm font-semibold transition-all whitespace-nowrap">Semua</button>
+                    <button onclick="filterMenu('biasa')" id="btn-biasa" class="filter-btn flex-1 md:flex-none px-5 py-2 rounded-full text-xs md:text-sm font-semibold text-gray-400 hover:text-white transition-all whitespace-nowrap">Biasa</button>
+                    <button onclick="filterMenu('campur')" id="btn-campur" class="filter-btn flex-1 md:flex-none px-5 py-2 rounded-full text-xs md:text-sm font-semibold text-gray-400 hover:text-white transition-all whitespace-nowrap">Campur</button>
+                    <button onclick="filterMenu('istimewa')" id="btn-istimewa" class="filter-btn flex-1 md:flex-none px-5 py-2 rounded-full text-xs md:text-sm font-semibold text-gray-400 hover:text-white transition-all whitespace-nowrap">Istimewa</button>
                 </div>
             </div>
 
             <!-- Grid Daftar Menu Dynamis -->
-            <div id="menu-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+            <div id="menu-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <!-- Konten Menu Akan Dirender oleh JavaScript -->
             </div>
         </section>
@@ -147,9 +171,12 @@
     </main>
 
     <!-- Footer -->
-    <footer class="text-center text-gray-500 text-sm py-8 fade-in-up">
-        <p>&copy; 2026 Terang Bulan Sarang Madu. Dibuat dengan 💛.</p>
-        <p class="mt-2 text-xs">Desain Menu Interaktif (Non-Checkout)</p>
+    <footer class="text-center text-gray-500 text-sm py-8 fade-in-up border-t border-white/5 mt-10">
+        <p>&copy; 2026 Terang Bulan Sarang Madu.</p>
+        <div class="flex justify-center gap-4 mt-3">
+            <a href="https://www.instagram.com/terangbulansarangmadu" class="hover:text-yellow-400 transition"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://wa.me/6282142525420" class="hover:text-green-400 transition"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
     </footer>
 
     <style>
@@ -158,7 +185,6 @@
             color: #111827 !important;
             box-shadow: 0 4px 10px rgba(251, 191, 36, 0.3);
         }
-        /* Utility class to hide scrollbar for filter container */
         .no-scrollbar::-webkit-scrollbar {
             display: none;
         }
@@ -169,9 +195,7 @@
     </style>
 
     <script>
-        // Database Menu Terang Bulan
         const menuData = [
-            // KATEGORI BIASA
             { name: "Ketan Hitam + Kelapa", price: "Rp 12.000", cat: "biasa" },
             { name: "Kacang Ijo + Kelapa", price: "Rp 12.000", cat: "biasa" },
             { name: "Pisang + Kelapa", price: "Rp 12.000", cat: "biasa" },
@@ -179,8 +203,6 @@
             { name: "Strobery", price: "Rp 12.000", cat: "biasa" },
             { name: "Piscok", price: "Rp 12.000", cat: "biasa" },
             { name: "Coklat", price: "Rp 12.000", cat: "biasa" },
-
-            // KATEGORI CAMPUR
             { name: "Ketan Hitam Kacang Ijo + Kelapa", price: "Rp 14.000", cat: "campur" },
             { name: "Kacang Ijo Pisang + Kelapa", price: "Rp 14.000", cat: "campur" },
             { name: "Ketan Hitam Pisang + Kelapa", price: "Rp 14.000", cat: "campur" },
@@ -188,8 +210,6 @@
             { name: "Coklat + Kelapa", price: "Rp 14.000", cat: "campur" },
             { name: "Strobery Mesis", price: "Rp 14.000", cat: "campur" },
             { name: "Kacang Mesis", price: "Rp 14.000", cat: "campur" },
-
-            // KATEGORI ISTIMEWA
             { name: "Keju", price: "Rp 15.000", cat: "istimewa" },
             { name: "Kacang Mesis Susu", price: "Rp 15.000", cat: "istimewa" },
             { name: "Keju Susu", price: "Rp 16.000", cat: "istimewa" },
@@ -205,24 +225,19 @@
 
         const menuContainer = document.getElementById('menu-container');
 
-        // Fungsi Render Menu
         function renderMenu(filter) {
             menuContainer.innerHTML = '';
             
             menuData.forEach((item, index) => {
                 if (filter === 'semua' || item.cat === filter) {
-                    
-                    // Pewarnaan Label berdasarkan kategori
                     let badgeColor = '';
                     if(item.cat === 'biasa') badgeColor = 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30';
                     else if(item.cat === 'campur') badgeColor = 'bg-blue-500/20 text-blue-400 border border-blue-500/30';
                     else badgeColor = 'bg-red-500/20 text-red-400 border border-red-500/30';
 
                     const card = document.createElement('div');
-                    // Menggunakan Bento style untuk card tiap item
                     card.className = `bento-card rounded-2xl p-5 flex flex-col justify-between`;
-                    // Efek kemunculan perlahan
-                    card.style.animation = `fadeIn 0.5s ease forwards ${index * 0.05}s`;
+                    card.style.animation = `fadeIn 0.5s ease forwards ${index * 0.03}s`;
                     card.style.opacity = '0';
                     
                     card.innerHTML = `
@@ -230,7 +245,7 @@
                             <div class="flex justify-start mb-3">
                                 <span class="text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider ${badgeColor}">${item.cat}</span>
                             </div>
-                            <h3 class="text-base font-bold text-white leading-snug mb-2">${item.name}</h3>
+                            <h3 class="text-sm md:text-base font-bold text-white leading-snug mb-2">${item.name}</h3>
                         </div>
                         <div class="mt-3 pt-3 border-t border-white/5 flex justify-between items-center">
                             <span class="text-yellow-400 font-bold tracking-wide">${item.price}</span>
@@ -241,24 +256,19 @@
             });
         }
 
-        // Fungsi Filter Tombol
         function filterMenu(category) {
-            // Reset semua tombol
             document.querySelectorAll('.filter-btn').forEach(btn => {
                 btn.classList.remove('active-filter', 'text-gray-900');
                 btn.classList.add('text-gray-400');
             });
             
-            // Aktifkan tombol yang di-klik
             const activeBtn = document.getElementById(`btn-${category}`);
             activeBtn.classList.add('active-filter');
             activeBtn.classList.remove('text-gray-400');
 
-            // Render ulang isi
             renderMenu(category);
         }
 
-        // Animasi Scroll Reveal (Intersection Observer)
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -269,7 +279,6 @@
 
         document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
 
-        // Inisialisasi awal
         renderMenu('semua');
     </script>
     
