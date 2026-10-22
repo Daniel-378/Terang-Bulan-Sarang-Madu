@@ -1,12 +1,17 @@
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu - Terang Bulan Sarang Madu</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -17,18 +22,18 @@
             font-family: 'Chewy', cursive;
         }
         .glow-honey {
-            box-shadow: 0 0 20px rgba(251, 191, 36, 0.15);
+            box-shadow: 0 0 25px rgba(251, 191, 36, 0.15);
         }
         .bento-card {
             background: rgba(31, 41, 55, 0.6);
             backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .bento-card:hover {
             border-color: rgba(251, 191, 36, 0.4);
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(251, 191, 36, 0.1);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(251, 191, 36, 0.15);
         }
         ::-webkit-scrollbar {
             width: 8px;
@@ -56,6 +61,7 @@
     <!-- Floating Navigation Pill -->
     <nav class="fixed top-4 left-1/2 transform -translate-x-1/2 w-[95%] max-w-2xl z-50">
         <div class="bg-gray-900/90 backdrop-blur-xl border border-white/10 rounded-full px-4 py-2 md:px-6 md:py-3 flex justify-between items-center shadow-2xl">
+            <!-- Operational Status Indicator -->
             <div class="flex items-center gap-2">
                 <span class="relative flex h-3 w-3">
                   <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -64,11 +70,10 @@
                 <span class="text-[10px] md:text-xs font-semibold text-gray-200 tracking-wider">BUKA (17.30 - 23.00)</span>
             </div>
             
-            <!-- Tombol Instagram Terhubung -->
-            <a href="https://www.instagram.com/terangbulansarangmadu" target="_blank" class="flex items-center gap-2 bg-gray-800 hover:bg-gray-700 px-3 py-1.5 rounded-full transition border border-white/10 text-gray-200 hover:text-yellow-400 group">
-                <i class="fab fa-instagram text-lg group-hover:scale-110 transition-transform"></i>
-                <span class="text-xs font-semibold tracking-wide hidden sm:inline">@terangbulansarangmadu</span>
-                <span class="text-xs font-semibold tracking-wide sm:hidden">Instagram</span>
+            <!-- Instagram Link Terhubung -->
+            <a href="https://www.instagram.com/terangbulan_sarangmadu" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-gradient-to-r from-purple-600/30 to-pink-600/30 hover:from-purple-600/50 hover:to-pink-600/50 px-3 py-1.5 rounded-full transition border border-pink-500/30 text-gray-100 group">
+                <i class="fab fa-instagram text-lg text-pink-400 group-hover:scale-110 transition-transform"></i>
+                <span class="text-xs font-semibold tracking-wide">@terangbulan_sarangmadu</span>
             </a>
         </div>
     </nav>
@@ -78,55 +83,58 @@
         
         <!-- Header / Hero Bento -->
         <header class="bento-card rounded-[2.5rem] p-8 md:p-12 mb-6 glow-honey fade-in-up text-center relative overflow-hidden">
-            <div class="absolute -top-10 -right-10 w-40 h-40 bg-yellow-500/10 rounded-full blur-3xl"></div>
-            <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-orange-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute -top-10 -right-10 w-48 h-48 bg-yellow-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-10 -left-10 w-48 h-48 bg-orange-500/10 rounded-full blur-3xl pointer-events-none"></div>
             
-            <p class="text-yellow-500 font-bold tracking-widest text-sm mb-2 uppercase">Amanah Rasa</p>
+            <p class="text-yellow-500 font-bold tracking-widest text-xs md:text-sm mb-2 uppercase">Amanah Rasa</p>
             <h1 class="font-chewy text-5xl md:text-6xl text-white mb-4 leading-tight">
-                Terang Bulan <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-600">Sarang Madu</span>
+                Terang Bulan <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-600">Sarang Madu</span>
             </h1>
-            <p class="text-lg md:text-2xl text-gray-300 mb-2">MANISNYA PAS, SARANG MADUNYA BERKELAS 👑🍯</p>
-            <p class="text-md text-yellow-400 font-semibold italic mb-8">"Lezat, Tebal & Berserat!"</p>
+            <p class="text-lg md:text-2xl text-gray-200 font-semibold mb-2">MANISNYA PAS, SARANG MADUNYA BERKELAS 👑🍯</p>
+            <p class="text-md md:text-lg text-yellow-400 font-medium italic mb-8">"Lezat, Tebal & Berserat!"</p>
 
             <div class="flex flex-col md:flex-row justify-center items-center gap-4 mt-4">
-                <!-- Tombol Google Maps Terhubung -->
-                <a href="https://www.google.com/maps/search/?api=1&query=SDN+Cangkir+Driyorejo+Gresik" target="_blank" class="bg-gray-800 hover:bg-gray-700 text-white px-2 py-2 pr-6 rounded-2xl flex items-center gap-3 border border-white/10 transition-all text-sm md:text-base font-semibold group w-full md:w-auto">
-                    <div class="bg-red-500/20 p-3 rounded-xl group-hover:bg-red-500/40 transition">
+                <!-- Google Maps Link -->
+                <a href="https://www.google.com/maps/search/?api=1&query=SDN+Cangkir+Driyorejo+Gresik" target="_blank" rel="noopener noreferrer" class="bg-gray-800/80 hover:bg-gray-700/80 text-white px-3 py-2.5 pr-6 rounded-2xl flex items-center gap-3 border border-white/10 transition-all text-sm md:text-base font-semibold group w-full md:w-auto">
+                    <div class="bg-red-500/20 p-2.5 rounded-xl group-hover:bg-red-500/30 transition">
                         <i class="fas fa-map-marker-alt text-red-500 text-xl"></i>
                     </div>
                     <div class="text-left">
-                        <span class="block text-[10px] text-gray-400 font-normal uppercase tracking-wider">Buka di Google Maps</span>
+                        <span class="block text-[10px] text-gray-400 font-normal uppercase tracking-wider">Buka Google Maps</span>
                         Depan SDN Cangkir, Gresik
                     </div>
                 </a>
 
-                <div class="bg-gray-800 text-white px-6 py-4 rounded-2xl flex items-center gap-3 border border-white/10 text-sm md:text-base font-semibold w-full md:w-auto justify-center">
-                    <i class="far fa-clock text-yellow-400 text-xl"></i> 
-                    <div>
-                        <span class="block text-[10px] text-gray-400 font-normal uppercase tracking-wider">Jadwal Libur</span>
-                        Tutup Hari Kamis
+                <!-- Jam Operasional & Hari Tutup -->
+                <div class="bg-gray-800/80 text-white px-5 py-2.5 rounded-2xl flex items-center gap-3 border border-white/10 text-sm md:text-base font-semibold w-full md:w-auto justify-center">
+                    <div class="bg-yellow-500/20 p-2.5 rounded-xl">
+                        <i class="far fa-clock text-yellow-400 text-xl"></i> 
+                    </div>
+                    <div class="text-left">
+                        <span class="block text-[10px] text-gray-400 font-normal uppercase tracking-wider">Jam Buka Kedai</span>
+                        17.30 - 23.00 <span class="text-red-400 text-xs font-normal">(Libur: Kamis)</span>
                     </div>
                 </div>
             </div>
         </header>
 
-        <!-- Bento Grid Info & Rating (3 Kolom) -->
+        <!-- Bento Grid Highlights (Promo, Rating, WA) -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 fade-in-up">
             
-            <!-- Promo Card -->
-            <div class="bg-gradient-to-br from-yellow-500/20 to-orange-600/20 backdrop-blur-md rounded-[2rem] p-6 border border-yellow-500/30 flex items-center justify-center glow-honey relative overflow-hidden group h-full">
+            <!-- Card Promo -->
+            <div class="bg-gradient-to-br from-yellow-500/20 via-amber-500/10 to-orange-600/20 backdrop-blur-md rounded-[2rem] p-6 border border-yellow-500/30 flex items-center justify-center glow-honey relative overflow-hidden group min-h-[160px]">
                 <div class="absolute inset-0 bg-yellow-400/5 group-hover:bg-yellow-400/10 transition"></div>
                 <div class="text-center relative z-10">
-                    <span class="bg-red-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3 inline-block animate-pulse">Promo Spesial</span>
+                    <span class="bg-red-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2 inline-block animate-pulse">Promo Spesial</span>
                     <h2 class="text-3xl font-chewy text-yellow-400 mb-1">BELI 10 GRATIS 1</h2>
                     <p class="text-gray-300 text-xs">Berlaku untuk semua varian rasa!</p>
                 </div>
             </div>
 
-            <!-- Rating Card Baru -->
-            <div class="bento-card rounded-[2rem] p-6 flex flex-col items-center justify-center text-center h-full">
-                <h3 class="text-4xl font-chewy text-white mb-2">4.9 <span class="text-xl text-gray-400 font-sans font-semibold">/ 5</span></h3>
-                <div class="text-yellow-400 text-lg mb-3 flex gap-1">
+            <!-- Card Rating -->
+            <div class="bento-card rounded-[2rem] p-6 flex flex-col items-center justify-center text-center min-h-[160px]">
+                <h3 class="text-4xl font-chewy text-white mb-1">4.9 <span class="text-xl text-gray-400 font-sans font-semibold">/ 5</span></h3>
+                <div class="text-yellow-400 text-base mb-2 flex gap-1">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -134,16 +142,16 @@
                     <i class="fas fa-star-half-alt"></i>
                 </div>
                 <p class="text-gray-300 text-xs font-semibold">Berdasarkan Ulasan Pelanggan</p>
-                <p class="text-gray-500 text-[10px] mt-1">Terfavorit di Driyorejo!</p>
+                <p class="text-gray-500 text-[10px] mt-0.5">Terfavorit di Driyorejo!</p>
             </div>
 
-            <!-- Kontak Card -->
-            <div class="bento-card rounded-[2rem] p-6 flex flex-col items-center justify-center text-center h-full">
-                <i class="fab fa-whatsapp text-4xl text-green-400 mb-3"></i>
-                <h3 class="text-base font-bold text-white mb-1">Pesan via WhatsApp</h3>
-                <p class="text-gray-400 text-xs mb-4">Tanpa antre, langsung ambil!</p>
-                <a href="https://wa.me/6282142525420" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-xl transition-all shadow-lg shadow-green-500/30 text-sm">
-                    0821-4252-5420
+            <!-- Card WhatsApp -->
+            <div class="bento-card rounded-[2rem] p-6 flex flex-col items-center justify-center text-center min-h-[160px]">
+                <i class="fab fa-whatsapp text-4xl text-green-400 mb-2"></i>
+                <h3 class="text-sm font-bold text-white mb-0.5">Pesan via WhatsApp</h3>
+                <p class="text-gray-400 text-xs mb-3">Tanpa antre, tinggal ambil!</p>
+                <a href="https://wa.me/6282142525420" target="_blank" rel="noopener noreferrer" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-5 rounded-xl transition-all shadow-lg shadow-green-500/20 text-xs flex items-center gap-2">
+                    <i class="fab fa-whatsapp"></i> 0821-4252-5420
                 </a>
             </div>
         </div>
@@ -151,7 +159,10 @@
         <!-- Menu Section -->
         <section class="mt-8 fade-in-up">
             <div class="flex flex-col md:flex-row justify-between items-center mb-6 gap-4">
-                <h2 class="font-chewy text-4xl text-white">Buku Menu</h2>
+                <div>
+                    <h2 class="font-chewy text-4xl text-white">Buku Menu</h2>
+                    <p class="text-xs text-gray-400">Pilih kategori untuk memfilter varian rasa</p>
+                </div>
                 
                 <!-- Filter Pills -->
                 <div class="flex bg-gray-800/80 p-1.5 rounded-full border border-white/5 overflow-x-auto w-full md:w-auto no-scrollbar">
@@ -162,20 +173,24 @@
                 </div>
             </div>
 
-            <!-- Grid Daftar Menu Dynamis -->
+            <!-- Grid Daftar Menu -->
             <div id="menu-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                <!-- Konten Menu Akan Dirender oleh JavaScript -->
+                <!-- Rendered dynamically by JavaScript -->
             </div>
         </section>
 
     </main>
 
     <!-- Footer -->
-    <footer class="text-center text-gray-500 text-sm py-8 fade-in-up border-t border-white/5 mt-10">
-        <p>&copy; 2026 Terang Bulan Sarang Madu.</p>
-        <div class="flex justify-center gap-4 mt-3">
-            <a href="https://www.instagram.com/terangbulansarangmadu" class="hover:text-yellow-400 transition"><i class="fab fa-instagram"></i> Instagram</a>
-            <a href="https://wa.me/6282142525420" class="hover:text-green-400 transition"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    <footer class="text-center text-gray-500 text-xs py-8 fade-in-up border-t border-white/5 mt-10">
+        <p>&copy; 2026 Terang Bulan Sarang Madu. All rights reserved.</p>
+        <div class="flex justify-center gap-6 mt-3">
+            <a href="https://www.instagram.com/terangbulan_sarangmadu" target="_blank" rel="noopener noreferrer" class="hover:text-pink-400 transition flex items-center gap-1.5">
+                <i class="fab fa-instagram"></i> @terangbulan_sarangmadu
+            </a>
+            <a href="https://wa.me/6282142525420" target="_blank" rel="noopener noreferrer" class="hover:text-green-400 transition flex items-center gap-1.5">
+                <i class="fab fa-whatsapp"></i> WhatsApp Order
+            </a>
         </div>
     </footer>
 
@@ -195,7 +210,9 @@
     </style>
 
     <script>
+        // Data Menu Lengkap berdasarkan foto flyer "Amanah Rasa"
         const menuData = [
+            // BIASA (Rp 12.000)
             { name: "Ketan Hitam + Kelapa", price: "Rp 12.000", cat: "biasa" },
             { name: "Kacang Ijo + Kelapa", price: "Rp 12.000", cat: "biasa" },
             { name: "Pisang + Kelapa", price: "Rp 12.000", cat: "biasa" },
@@ -203,6 +220,8 @@
             { name: "Strobery", price: "Rp 12.000", cat: "biasa" },
             { name: "Piscok", price: "Rp 12.000", cat: "biasa" },
             { name: "Coklat", price: "Rp 12.000", cat: "biasa" },
+
+            // CAMPUR (Rp 14.000)
             { name: "Ketan Hitam Kacang Ijo + Kelapa", price: "Rp 14.000", cat: "campur" },
             { name: "Kacang Ijo Pisang + Kelapa", price: "Rp 14.000", cat: "campur" },
             { name: "Ketan Hitam Pisang + Kelapa", price: "Rp 14.000", cat: "campur" },
@@ -210,6 +229,8 @@
             { name: "Coklat + Kelapa", price: "Rp 14.000", cat: "campur" },
             { name: "Strobery Mesis", price: "Rp 14.000", cat: "campur" },
             { name: "Kacang Mesis", price: "Rp 14.000", cat: "campur" },
+
+            // ISTIMEWA (Mulai Rp 15.000 - Rp 21.000)
             { name: "Keju", price: "Rp 15.000", cat: "istimewa" },
             { name: "Kacang Mesis Susu", price: "Rp 15.000", cat: "istimewa" },
             { name: "Keju Susu", price: "Rp 16.000", cat: "istimewa" },
@@ -237,18 +258,19 @@
 
                     const card = document.createElement('div');
                     card.className = `bento-card rounded-2xl p-5 flex flex-col justify-between`;
-                    card.style.animation = `fadeIn 0.5s ease forwards ${index * 0.03}s`;
+                    card.style.animation = `fadeIn 0.4s ease forwards ${index * 0.03}s`;
                     card.style.opacity = '0';
                     
                     card.innerHTML = `
                         <div>
-                            <div class="flex justify-start mb-3">
-                                <span class="text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider ${badgeColor}">${item.cat}</span>
+                            <div class="flex justify-start mb-2.5">
+                                <span class="text-[10px] font-bold px-2 py-0.5 rounded-md uppercase tracking-wider ${badgeColor}">${item.cat}</span>
                             </div>
                             <h3 class="text-sm md:text-base font-bold text-white leading-snug mb-2">${item.name}</h3>
                         </div>
                         <div class="mt-3 pt-3 border-t border-white/5 flex justify-between items-center">
-                            <span class="text-yellow-400 font-bold tracking-wide">${item.price}</span>
+                            <span class="text-yellow-400 font-bold tracking-wide text-sm md:text-base">${item.price}</span>
+                            <span class="text-[10px] text-gray-500">Porsi Loyang</span>
                         </div>
                     `;
                     menuContainer.appendChild(card);
@@ -263,12 +285,15 @@
             });
             
             const activeBtn = document.getElementById(`btn-${category}`);
-            activeBtn.classList.add('active-filter');
-            activeBtn.classList.remove('text-gray-400');
+            if (activeBtn) {
+                activeBtn.classList.add('active-filter');
+                activeBtn.classList.remove('text-gray-400');
+            }
 
             renderMenu(category);
         }
 
+        // Scroll animation observer
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -279,14 +304,16 @@
 
         document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
 
+        // Initial render
         renderMenu('semua');
     </script>
     
     <style>
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
+            from { opacity: 0; transform: translateY(8px); }
             to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </body>
 </html>
+```
